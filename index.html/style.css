@@ -1,0 +1,374 @@
+/* Pengaturan Umum */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: whitesmoke;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background-color: rgb(31, 31, 44);
+    border-bottom: 1px solid white;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.header-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo span {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-menu {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .nav-menu {
+        display: flex;
+        gap: 1.5rem;
+    }
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.nav-menu a:hover {
+    color: blue;
+}
+
+.btn-shopee {
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+
+/* Hero Section (Beranda) */
+.hero-section {
+    background-color: #eff6ff;
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.hero-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-section h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    color: #475569;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-grab {
+    background-color: #059669;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.btn-grab:hover {
+    background-color: #047857;
+}
+
+/* Product Section */
+.product-section {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.section-title p {
+    color: #475569;
+    margin-top: 0.5rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.product-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.product-img {
+    width: 100%;
+    height: 160px;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.blue-bg { background-color: #dbeafe; color: #1e40af; }
+.gray-bg { background-color: #f1f5f9; color: #334155; }
+.emerald-bg { background-color: #d1fae5; color: #065f46; }
+
+.product-card h3 {
+    font-size: 1.25rem;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.product-card p {
+    color: #475569;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 1rem;
+    margin-top: auto;
+}
+
+.price {
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+.price-grab {
+    font-weight: bold;
+    color: #047857;
+}
+
+.badge-shopee {
+    background-color: #ffedd5;
+    color: #c2410c;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+}
+
+.badge-grab {
+    background-color: #d1fae5;
+    color: #047857;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+}
+
+/* About Section */
+.about-section {
+    background-color: #f1f5f9;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 4rem 1rem;
+}
+
+.about-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.about-section p {
+    color: #475569;
+    margin-bottom: 1rem;
+}
+
+.btn-about {
+    display: inline-block;
+    background-color: #1e3a8a;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.btn-about:hover {
+    background-color: #1e40af;
+}
+
+.about-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.about-emoji {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-box h3 {
+    font-size: 1.25rem;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.about-box p {
+    font-size: 0.875rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #0f172a;
+    color: #cbd5e1;
+    padding: 3rem 1rem 1.5rem;
+}
+
+.footer-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.footer h3, .footer h4 {
+    color: white;
+    margin-bottom: 0.75rem;
+}
+
+.footer p {
+    font-size: 0.875rem;
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer ul li a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.footer ul li a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    max-width: 1150px;
+    margin: 0 auto;
+    border-top: 1px solid #1e293b;
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #64748b;
+}
